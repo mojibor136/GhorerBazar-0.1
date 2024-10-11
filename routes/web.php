@@ -27,19 +27,14 @@ Route::controller(AdminController::class)->group(function(){
 
 Route::controller(CategoryController::class)->group(function(){
     Route::get('/category/list' , 'Index')->name('category.list');
-    Route::get('/add/category' , 'AddCategory')->name('add.category');
-    Route::post('/store/category' , 'StoreCategory')->name('store.category');
 });
 
 Route::controller(SubCategoryController::class)->group(function(){
     Route::get('/subcategory/list' , 'Index')->name('subcategory.list');
-    Route::post('/store/subcategory' , 'StoreSubcategory')->name('store.subcategory');
 });
 
 Route::controller(AdminProductController::class)->group(function(){
     Route::get('/product/list' , 'Index')->name('product.list');
-    Route::get('/add/product' , 'AddProduct')->name('add.product');
-    Route::post('/store/product' , 'StoreProduct')->name('store.product');
 });
 
 // Web Controller
